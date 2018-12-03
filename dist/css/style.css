@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 body {
   background-color: #26bcac; }
 
 h1 {
   text-align: center;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 36px;
   margin-bottom: 50px; }
 
@@ -39,10 +39,10 @@ h1 {
 button {
   position: absolute;
   bottom: 0;
-  display: inline-block;
   width: 100%;
   padding: 20px;
   border-radius: 7px;
   font-size: 26px;
   font-weight: bold;
-  color: #1aa798; }
+  text-transform: uppercase;
+  color: #049e8f; }
