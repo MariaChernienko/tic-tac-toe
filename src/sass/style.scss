@@ -9,7 +9,7 @@ body {
 }
 h1 {
   text-align: center;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(53, 51, 51);
   font-size: 36px;
   margin-bottom: 50px;
 }
@@ -22,16 +22,17 @@ h1 {
   width: 400px;
 
   &__cell {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 120px;
     height: 120px;
-    border-bottom: 10px solid rgba(0, 0, 0, 0.2);
-    border-right: 10px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 10px solid rgba(0, 0, 0, 0.4);
+    border-right: 10px solid rgba(0, 0, 0, 0.4);
     border-radius: 3%;
     color: orange;
-    font-size: 26px;
+    font-size: 0px;
 
     &:nth-child(3n) {
       border-right: 10px solid transparent;
@@ -39,10 +40,46 @@ h1 {
     &:nth-child(n+7) {
       border-bottom: 10px solid transparent;
     }
+    .circle {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 80px;
+      height: 80px;
+      border: 10px solid rgb(53, 51, 51);
+      border-radius: 50%;
+    }
+    .cross {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+
+      &:before, &:after {
+        position: absolute;
+        top: 10px;
+        left: 55px;
+        content: ' ';
+        height: 100%;
+        width: 10px;
+        background-color: rgb(53, 51, 51);
+        }
+        &:before {
+        transform: rotate(45deg);
+        }
+        &:after {
+        transform: rotate(-45deg);
+        }
+  
+    }
   }
+
+
+
 }
 button {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 20px;
